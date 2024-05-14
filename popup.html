@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Privacy Guardian</title>
+</head>
+<body>
+    <div class="tabs">
+        <button class="tablinks">ThirdParty Domains</button>
+        <button class="tablinks">Local Storage</button>
+        <button class="tablinks">Canvas Fingerprint</button>
+        <button class="tablinks">Cookies</button>
+    </div>
+
+    <div id="ThirdPartyDomains" class="tabcontent">
+        <h3>Third-Party Domains</h3>
+        <ul id="domainList"></ul>
+    </div>
+    
+    <div id="LocalStorageUsage" class="tabcontent">
+        <h3>Local Storage Usage</h3>
+        <h4>Local Storage Data</h4>
+        <pre id="localStorageData"></pre>
+        <h4>Session Storage Data</h4>
+        <pre id="sessionStorageData"></pre>
+    </div>
+
+    <div id="CanvasFingerprint" class="tabcontent">
+        <h3>Canvas Fingerprint Attempts</h3>
+        <ul id="fingerprintList"></ul>
+    </div>
+
+    <div id="Cookies" class="tabcontent">
+        <h3>Cookies</h3>
+        <h4>First-Party Cookies</h4>
+        <ul id="firstPartyCookiesList"></ul>
+        <h4>Third-Party Cookies</h4>
+        <ul id="thirdPartyCookiesList"></ul>
+    </div>
+    
+    
+    
+
+    <script src="popup.js"></script>
+</body>
+</html>

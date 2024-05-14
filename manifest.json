@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Privacy Guardian",
+  "version": "1.0",
+  "description": "Detect third-party domains and local storage usage.",
+  "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "storage",
+      "tabs",
+      "<all_urls>"
+  ],
+  "background": {
+      "scripts": ["background.js"]
+  },
+  "content_scripts": [
+      {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"]
+      }
+  ],
+  "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+          "16": "icon.png",
+          "48": "icon.png",
+          "128": "icon.png"
+      }
+  },
+  "icons": {
+      "48": "icon.png",
+      "96": "icon.png"
+  },
+  "web_accessible_resources": [
+      "styles.css"
+  ]
+}
